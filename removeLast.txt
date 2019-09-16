@@ -1,0 +1,14 @@
+public void removeLast(){
+		if(isEmpty()){
+			throw new NoSuchElementException();
+		}
+		else if(first == last){
+			first = last = null;
+		}
+		else{
+			Node node = getPreviousNode(last);
+			node.next = null;
+			last = node;
+		}
+		size--;
+	}
