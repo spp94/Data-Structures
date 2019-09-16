@@ -1,0 +1,14 @@
+public int indexOf(int item){
+		Node node = first;
+		int count = 0;
+		while(node != null){
+			if(node.value == item){
+				return count;
+			}
+			else{
+				count++;
+				node = node.next;
+			}
+		}
+		return -1;
+	}
