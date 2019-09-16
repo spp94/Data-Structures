@@ -1,0 +1,11 @@
+public void addLast(int item){
+		Node node = new Node(item);
+		if(isEmpty()){
+			first = last = node;
+		}
+		else{
+			last.next = node;
+			last = node;
+		}
+		size++;
+	}
