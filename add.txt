@@ -1,0 +1,17 @@
+public void add(int item){
+		Node node = new Node(item);
+		if(isEmpty()){
+			first = last = node;
+			first.next = last.next = null;
+		}
+		else if(first == last){
+			first.next = node;
+			last = node;
+			last.next = null;
+		}
+		else{
+			last.next = node;
+			last = node;
+			}
+		size++;
+		}
