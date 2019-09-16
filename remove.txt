@@ -1,0 +1,12 @@
+public void remove(){
+		if(isEmpty()){
+			throw new NoSuchElementException();
+		}
+		else if(first == last){
+			first = last = null;
+		}
+		else{
+			first = first.next; 
+		}
+		size--;
+	}
