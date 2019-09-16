@@ -1,0 +1,10 @@
+public int[] toArray(){
+		int[] temp = new int[size];
+		Node current = first;
+		int index = 0;
+		while(current != null){
+			temp[index++] = current.value;
+			current = current.next;
+		}
+		return temp;
+	}
