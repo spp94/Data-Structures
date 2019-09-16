@@ -1,0 +1,19 @@
+private Node getPreviousNode(int index){
+		int count = 0;
+		if(index > size){
+			return last;
+		}
+		else{
+			Node current = first;
+			while(current != null){
+				if(count == index-1){
+					return current;
+				}
+				else{
+					current = current.next;
+				}
+				count++;
+			}
+		}
+		return null;
+	}
