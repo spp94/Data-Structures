@@ -1,0 +1,14 @@
+public void add(int index, int item){
+		 if(index > size){
+			 Node node = new Node(item);
+			 last.next = node;
+			 last = node;
+		 }
+		 else{
+			 Node node = new Node(item);
+			 Node prevNode = getPreviousNode(index);
+			 node.next = prevNode.next;
+			 prevNode.next = node;
+		 }
+		 size++;
+	}
