@@ -1,0 +1,13 @@
+public void remove(int index){
+		if(index > size || isEmpty()){
+			throw new NoSuchElementException();
+		}
+		else if(first == last){
+			first = last = null;
+		}
+		else{
+			Node node = getPreviousNode(index);
+			node.next = node.next.next;
+		}
+		size--;
+	}
