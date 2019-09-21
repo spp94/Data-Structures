@@ -1,0 +1,20 @@
+public void reverse(){
+		if(isEmpty()){
+			throw new NoSuchElementException();
+		}
+		else if(first == last){
+			// do nothing
+		}
+		else{
+			Node previous = first, current = first.next;
+			last = first;
+			last.next = null;
+			while(current != null){
+				Node node = current.next;
+				current.next = previous;
+				previous = current;
+				current = node;
+			}
+			first = previous;
+		}
+	}
