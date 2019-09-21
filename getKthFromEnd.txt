@@ -1,0 +1,25 @@
+public int getKthFromEnd(int k){
+		if(isEmpty()){
+			//throw new IllegalStateException();
+			return -1;
+		}
+		else{
+			Node start, end;
+			start = end = first;
+			for(int i = 1; i <= k-1; i++){
+				end = end.next;
+				if(end == null){
+					//throw new NoSuchElementException();
+					return -1;
+				}
+				else{
+					continue;
+				}
+			}
+			while(end != last){
+				end = end.next;
+				start = start.next;
+			}
+			return start.value;
+		}
+	}
