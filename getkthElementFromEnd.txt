@@ -1,0 +1,14 @@
+public int getKthElementFromEnd(int k){
+		// rather than searching kth from end, we can search for n - kth from start
+		int index = 0, i = size - k; 
+		Node current = first;
+		while(current != null){
+			if(index++ == i){
+				return current.value;
+			}
+			else{
+				current =  current.next;
+			}
+		}
+		return -1;
+	}
